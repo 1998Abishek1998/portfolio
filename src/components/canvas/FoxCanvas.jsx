@@ -1,7 +1,7 @@
 import React, { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import CanvasLoader from './CanvasLoader';
-import { Fox } from '../../models';
+import { Fox } from '../../models/Fox';
 
 const FoxCanvas = () => {
   return (

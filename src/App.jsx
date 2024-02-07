@@ -1,56 +1,25 @@
-import { Suspense, lazy } from 'react';
-import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 
-import { Navbar } from "./components";
-// import { About, Contact, Home, Projects } from "./pages";
-
-const Layout = lazy(() => import('./components/Layout'))
-const About = lazy(() => import("./pages/About"))
-const Contact = lazy(() => import("./pages/Contact"))
-const Home = lazy(() => import("./pages/Home"))
-const Projects = lazy(() => import("./pages/Projects"))
+import { About, Contact, Home, Projects } from "./pages";
+import Parallax from './components/parallax/Parallax'
+import Layout from './components/Layout';
+import Work from './pages/Work/Work'
+import CompanyList from './pages/CompanyList'
 
 const App = () => {
   return (
     <main className='bg-black-500'>
-      <Suspense fallback={'...'}>
-        <Router>
-          <Navbar />
-          <Routes>
-            <Route path='/' element={<Home />} />
-            <Route
-              path='/*'
-              element={
-                <>
-                  <Routes>
-                    <Route path='/about'
-                      element={
-                        <Layout>
-                          <About />
-                        </Layout>
-                      }
-                    />
-                    <Route path='/projects'
-                      element={
-                        <Layout>
-                          <Projects />
-                        </Layout>
-                      }
-                    />
-                    <Route path='/contact'
-                      element={
-                        <Layout>
-                          <Contact />
-                        </Layout>
-                      }
-                    />
-                  </Routes>
-                </>
-              }
-            />
-          </Routes>
-        </Router>
-      </Suspense>
+      <Router>
+        <Layout>
+          <Home />
+          <About />
+          <Parallax/>
+          <Work />
+          <CompanyList/>
+          <Projects />
+          <Contact />
+        </Layout>
+      </Router>
     </main>
   );
 };

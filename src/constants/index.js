@@ -26,6 +26,21 @@ import {
   typescript
 } from "../assets/icons";
 
+export const navLinks = [
+  {
+    id: "about",
+    title: "About",
+  },
+  {
+    id: "work",
+    title: "Work",
+  },
+  {
+    id: "contact",
+    title: "Contact",
+  },
+];
+
 export const skills = [
   {
     imageUrl: css,
