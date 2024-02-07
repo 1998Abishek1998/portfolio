@@ -2,7 +2,7 @@ import { useRef } from "react";
 import "./parallax.scss";
 import { motion, useScroll, useTransform } from "framer-motion";
 
-const Parallax = ({ type }) => {
+const Parallax = () => {
   const ref = useRef();
 
   const { scrollYProgress } = useScroll({
@@ -14,26 +14,31 @@ const Parallax = ({ type }) => {
   const yBg = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
   return (
-    <section className='max-container-parallax'>
-    <div
-      className="parallax"
-      ref={ref}
-      style={{background:"linear-gradient(180deg, #111132, #0c0c1d)"}}
+    <section
+      style={{
+        height: '100vh',
+        overflow: 'hidden'
+      }}
     >
-      <motion.h1 style={{ y: yText }}>
-        What I do
-      </motion.h1>
-      <motion.div className="mountains"></motion.div>
-      <motion.div
-        className="planets"
-        style={{
-          y: yBg,
-          backgroundImage: 'url("/planets.png")',
-        }}
-      ></motion.div>
-      <motion.div style={{ x: yBg }} className="stars"></motion.div>
-    </div>
-    </section>
+      <div
+        className="parallax"
+        ref={ref}
+        style={{ background: "linear-gradient(180deg, #111132, #0c0c1d)" }}
+      >
+        <motion.h1 style={{ y: yText }}>
+          What I do
+        </motion.h1>
+        <motion.div className="mountains"></motion.div>
+        <motion.div
+          className="planets"
+          style={{
+            y: yBg,
+            backgroundImage: 'url("/planets.png")',
+          }}
+        ></motion.div>
+        <motion.div style={{ x: yBg }} className="stars"></motion.div>
+      </div>
+    </section >
   );
 };
 

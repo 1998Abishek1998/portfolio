@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import "./work.scss";
+import "./project.scss";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 
 const items = [
@@ -29,7 +29,7 @@ const items = [
   },
 ];
 
-const Single = ({ item }) => {
+const Single = ({ item, index }) => {
   const ref = useRef();
 
   const { scrollYProgress } = useScroll({
@@ -39,24 +39,43 @@ const Single = ({ item }) => {
   const y = useTransform(scrollYProgress, [0, 1], [-300, 300]);
 
   return (
-    <section >
+    <section
+      style={{
+        height: '50vh',
+        overflow: 'hidden'
+      }}
+    >
       <div className="container">
-        <div className="wrapper">
-          <div className="imageContainer" ref={ref}>
-            <img src={item.img} alt="" />
-          </div>
-          <motion.div className="textContainer" style={{y}}>
-            <h2>{item.title}</h2>
-            <p>{item.desc}</p>
-            <button>See Demo</button>
-          </motion.div>
-        </div>
+        {
+          index % 2 === 0 ?
+            <div className="wrapper">
+              <div className="imageContainer" ref={ref}>
+                <img src={item.img} alt="" />
+              </div>
+              <motion.div className="textContainer" style={{ y }}>
+                <h2>{item.title}</h2>
+                <p>{item.desc}</p>
+                <button>See Demo</button>
+              </motion.div>
+            </div>
+            :
+            <div className="wrapper">
+              <motion.div className="textContainer" style={{ y }}>
+                <h2>{item.title}</h2>
+                <p>{item.desc}</p>
+                <button>See Demo</button>
+              </motion.div>
+              <div className="imageContainer" ref={ref}>
+                <img src={item.img} alt="" />
+              </div>
+            </div>
+        }
       </div>
     </section>
   );
 };
 
-const Work = () => {
+const Projects = () => {
   const ref = useRef();
 
   const { scrollYProgress } = useScroll({
@@ -72,19 +91,18 @@ const Work = () => {
   return (
     <div className="portfolio" ref={ref} id="work">
       <div className="progress">
-      <h1 className='head-text'>
-        My{" "}
-        <span className='blue-gradient_text drop-shadow font-semibold'>
-          Projects
-        </span>
-      </h1>
-        <motion.div style={{ scaleX }} className="progressBar" ></motion.div>
+        <h1 className='flex items-center justify-center m-3 head-text'>
+          My{" "}
+          <span className='blue-gradient_text drop-shadow font-semibold'>
+            Projects
+          </span>
+        </h1>
       </div>
-      {items.map((item) => (
-        <Single item={item} key={item.id} />
+      {items.map((item, index) => (
+        <Single item={item} key={item.id} index={index} />
       ))}
     </div>
   );
 };
 
-export default Work;
+export default Projects;

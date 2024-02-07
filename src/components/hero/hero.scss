@@ -15,10 +15,6 @@
       margin-top: 70px;
     }
 
-    @include tablet {
-      margin-top: 200px;
-    }
-
     .textContainer {
       width: 50%;
       height: 100%;
@@ -37,7 +33,7 @@
 
       h2 {
         font-size: 30px;
-        color: rebeccapurple;
+        color: rgb(93, 113, 224);
         letter-spacing: 10px;
       }
 
@@ -56,6 +52,7 @@
           border-radius: 10px;
           background-color: transparent;
           color: white;
+          z-index: 20;
           margin-right: 20px;
           cursor: pointer;
           font-weight: 300;
@@ -76,7 +73,7 @@
 
     @include mobile {
       height: 60%;
-      width: 40%;
+      width: 90%;
       top: unset;
       right: 100;
       bottom: 0;
@@ -91,8 +88,8 @@
 
   .slidingTextContainer {
     position: absolute;
-    font-size: 50vh;
-    bottom: -120px;
+    font-size: 25vh;
+    bottom: 30px;
     white-space: nowrap;
     color: #ffffff09;
     width: 50%;

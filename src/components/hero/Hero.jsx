@@ -31,8 +31,8 @@ const sliderVariants = {
     x: "-220%",
     transition: {
       repeat: Infinity,
-      repeatType:"mirror",
-      duration: 20,
+      repeatType: "mirror",
+      duration: 15,
     },
   },
 };
@@ -50,13 +50,12 @@ const Hero = () => {
           <motion.h2 variants={textVariants}>Abishek Timsina
           </motion.h2>
           <motion.h1 variants={textVariants}>
-            Web developer and UI designer
+            Full-Stack <br /> Web Developer
           </motion.h1>
-          <motion.div variants={textVariants} className="buttons">
-            <motion.button variants={textVariants}>
-              See the Latest Works
-            </motion.button>
-            <motion.button variants={textVariants}>Contact Me</motion.button>
+          <motion.div variants={textVariants}>
+            <motion.div variants={textVariants}>
+              A JavaScript enthusiast with a passion for crafting dynamic and interactive web experiences. Equipped with expertise in a variety of JavaScript frameworks, libraries, and tools.
+            </motion.div>
           </motion.div>
           <motion.img
             variants={textVariants}
@@ -72,7 +71,7 @@ const Hero = () => {
         initial="initial"
         animate="animate"
       >
-        Writer Content Creator Influencer
+        Just JS
       </motion.div>
       <div className="imageContainer">
         <img src="/abishek_profile.png" alt="" />

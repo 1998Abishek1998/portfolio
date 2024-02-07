@@ -1,31 +1,22 @@
-import {
-  VerticalTimeline,
-  VerticalTimelineElement,
-} from "react-vertical-timeline-component";
-import { experiences, skills } from "../constants";
-
-import "react-vertical-timeline-component/style.min.css";
+import { skills } from "../constants";
 
 const About = () => {
   return (
     <section className='max-container' id="about">
       <h1 className='head-text'>
-        Hello, I'm{" "}
         <span className='blue-gradient_text font-semibold drop-shadow'>
-          {" "}
-          Abishek
-        </span>{" "}
-        👋
+          Brief
+        </span>
       </h1>
-
-      <div className='mt-5 flex flex-col gap-3 text-slate-500'>
+      <div className='mt-5 flex flex-col gap-3 text-slate-300'>
         <p>
-          Software Engineer based in Croatia, specializing in technical
-          education through hands-on learning and building applications.
+          With proficiency in popular frameworks like React, Vue, Nuxt and Next, I excel at architecting intuitive user interfaces and optimizing performance for seamless user interactions. Leveraging tools such as Webpack, Babel, and ESLint, I ensure code quality, maintainability, and compatibility across different environments.
+          <br />
+          <br />
+          Additionally, my familiarity with Node.js enables me to develop full-stack applications, empowering me to seamlessly integrate front-end and back-end functionalities. Whether it's RESTful APIs, real-time communication with WebSocket, or serverless architectures with AWS Lambda, I thrive in creating cohesive solutions that deliver value to users.
         </p>
       </div>
-
-      <div className='py-10 flex flex-col'>
+      <div className='py-16 flex flex-col'>
         <h3 className='subhead-text'>My Skills</h3>
 
         <div className='mt-16 flex flex-wrap gap-12'>

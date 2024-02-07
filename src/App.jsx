@@ -1,10 +1,10 @@
 import { BrowserRouter as Router } from "react-router-dom";
 
-import { About, Contact, Home, Projects } from "./pages";
+import { About, Contact, Home } from "./pages";
 import Parallax from './components/parallax/Parallax'
 import Layout from './components/Layout';
-import Work from './pages/Work/Work'
-import CompanyList from './pages/CompanyList'
+import Projects from './pages/Project/Projects'
+import Experience from './components/Experience';
 
 const App = () => {
   return (
@@ -13,10 +13,9 @@ const App = () => {
         <Layout>
           <Home />
           <About />
-          <Parallax/>
-          <Work />
-          <CompanyList/>
+          <Parallax />
           <Projects />
+          <Experience />
           <Contact />
         </Layout>
       </Router>
