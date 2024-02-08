@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import "./project.scss";
-import { motion, useScroll, useSpring, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 const items = [
   {
@@ -36,17 +36,27 @@ const Single = ({ item, index }) => {
     target: ref,
   });
 
-  const y = useTransform(scrollYProgress, [0, 1], [-300, 300]);
+  const y = useTransform(scrollYProgress, [0, 1], [-100, 200]);
 
   return (
     <section
       style={{
-        height: '50vh',
+        height: '45vh',
         overflow: 'hidden'
       }}
     >
       <div className="container">
-        {
+        <div className="wrapper">
+          <div className="imageContainer" ref={ref}>
+            <img src={item.img} alt="" />
+          </div>
+          <motion.div className="textContainer" style={{ y }}>
+            <h2>{item.title}</h2>
+            <p>{item.desc}</p>
+            <button>See Demo</button>
+          </motion.div>
+        </div>
+        {/* {
           index % 2 === 0 ?
             <div className="wrapper">
               <div className="imageContainer" ref={ref}>
@@ -69,7 +79,7 @@ const Single = ({ item, index }) => {
                 <img src={item.img} alt="" />
               </div>
             </div>
-        }
+        } */}
       </div>
     </section>
   );
@@ -78,18 +88,8 @@ const Single = ({ item, index }) => {
 const Projects = () => {
   const ref = useRef();
 
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["end end", "start start"],
-  });
-
-  const scaleX = useSpring(scrollYProgress, {
-    stiffness: 100,
-    damping: 30,
-  });
-
   return (
-    <div className="portfolio" ref={ref} id="work">
+    <div className="max-container-project portfolio" ref={ref} id="project">
       <div className="progress">
         <h1 className='flex items-center justify-center m-3 head-text'>
           My{" "}

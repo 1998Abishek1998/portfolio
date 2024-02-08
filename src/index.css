@@ -26,8 +26,8 @@ body:has(.card[data-color="green"]:hover) {
     @apply max-w-7xl mx-auto sm:p-16 pb-12 !pt-[100px] px-8 min-h-[100vh];
   }
 
-  .max-container-parallax {
-    @apply min-h-screen;
+  .max-container-project {
+    @apply max-w-7xl mx-auto sm:p-16;
   }
 
   .head-text {
