@@ -11,13 +11,17 @@
   },
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
+    "@material-tailwind/react": "^2.1.9",
     "@react-spring/three": "^9.7.3",
     "@react-three/drei": "^9.88.2",
     "@react-three/fiber": "^8.14.5",
+    "framer-motion": "^11.0.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-google-recaptcha": "^3.1.0",
     "react-router-dom": "^6.17.0",
     "react-vertical-timeline-component": "^3.6.0",
+    "sass": "^1.68.0",
     "three": "^0.157.0"
   },
   "devDependencies": {

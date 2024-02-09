@@ -1,15 +1,19 @@
-import hero from './hero.jpg'
-import meta from './meta.png'
-import shopify from './shopify.png'
-import starbucks from './starbucks.png'
-import tesla from './tesla.png'
 import logo from './logo.svg'
+import vue from './vue.png'
+import nuxt from './nuxt.png'
+import nest from './nest.png'
+import aws from './aws.png'
+import sql from './sql.png'
+import upaya from './upaya.png'
+import mavorion from './mavorion.png'
 
 export {
-    hero,
-    meta,
-    shopify,
-    starbucks,
-    tesla,
-    logo
+  logo,
+  vue,
+  nuxt,
+  nest,
+  aws,
+  sql,
+  upaya,
+  mavorion
 }

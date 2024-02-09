@@ -1,9 +1,7 @@
-import { meta, shopify, starbucks, tesla } from "../assets/images";
+import { nuxt, vue, nest, aws, sql, mavorion, upaya } from "../assets/images";
 import {
-  car,
   contact,
   css,
-  estate,
   express,
   git,
   github,
@@ -15,61 +13,56 @@ import {
   mui,
   nextjs,
   nodejs,
-  pricewise,
   react,
   redux,
   sass,
-  snapgram,
-  summiz,
   tailwindcss,
-  threads,
   typescript
 } from "../assets/icons";
 
-export const skills = [
+export const navLinks = [
   {
-    imageUrl: css,
-    name: "CSS",
-    type: "Frontend",
+    id: "about",
+    title: "About",
   },
   {
-    imageUrl: express,
-    name: "Express",
+    id: "project",
+    title: "Project",
+  },
+  {
+    id: "work",
+    title: "Work",
+  },
+  {
+    id: "contact",
+    title: "Contact",
+  },
+];
+
+export const skills = [
+  {
+    imageUrl: nodejs,
+    name: "Node.Js",
     type: "Backend",
   },
   {
-    imageUrl: git,
-    name: "Git",
-    type: "Version Control",
+    imageUrl: nest,
+    name: "Nest.Js",
+    type: "Backend",
   },
   {
-    imageUrl: github,
-    name: "GitHub",
-    type: "Version Control",
+    imageUrl: express,
+    name: "Express.Js",
+    type: "Backend",
   },
   {
-    imageUrl: html,
-    name: "HTML",
+    imageUrl: react,
+    name: "React.Js",
     type: "Frontend",
   },
   {
-    imageUrl: javascript,
-    name: "JavaScript",
-    type: "Frontend",
-  },
-  {
-    imageUrl: mongodb,
-    name: "MongoDB",
-    type: "Database",
-  },
-  {
-    imageUrl: motion,
-    name: "Motion",
-    type: "Animation",
-  },
-  {
-    imageUrl: mui,
-    name: "Material-UI",
+    imageUrl: vue,
+    name: "Vue.Js",
     type: "Frontend",
   },
   {
@@ -78,14 +71,24 @@ export const skills = [
     type: "Frontend",
   },
   {
-    imageUrl: nodejs,
-    name: "Node.js",
-    type: "Backend",
+    imageUrl: nuxt,
+    name: "Nuxt.Js",
+    type: "Frontend",
   },
   {
-    imageUrl: react,
-    name: "React",
-    type: "Frontend",
+    imageUrl: mongodb,
+    name: "MongoDB",
+    type: "Database",
+  },
+  {
+    imageUrl: sql,
+    name: "My SQL",
+    type: "Database",
+  },
+  {
+    imageUrl: aws,
+    name: "Amazon Web Services",
+    type: "Database",
   },
   {
     imageUrl: redux,
@@ -103,62 +106,87 @@ export const skills = [
     type: "Frontend",
   },
   {
+    imageUrl: motion,
+    name: "Motion",
+    type: "Animation",
+  },
+  {
+    imageUrl: mui,
+    name: "Material-UI",
+    type: "Frontend",
+  },
+  {
+    imageUrl: git,
+    name: "Git",
+    type: "Version Control",
+  },
+  {
+    imageUrl: github,
+    name: "GitHub",
+    type: "Version Control",
+  },
+  {
     imageUrl: typescript,
     name: "TypeScript",
     type: "Frontend",
-  }
+  },
+  {
+    imageUrl: html,
+    name: "HTML",
+    type: "Frontend",
+  },
+  {
+    imageUrl: css,
+    name: "CSS",
+    type: "Frontend",
+  },
+  {
+    imageUrl: javascript,
+    name: "JavaScript",
+    type: "Frontend",
+  },
 ];
 
 export const experiences = [
   {
-    title: "React.js Developer",
-    company_name: "Starbucks",
-    icon: starbucks,
+    title: "InternShip",
+    company_name: "Mavorion",
+    icon: mavorion,
     iconBg: "#accbe1",
-    date: "March 2020 - April 2021",
+    date: "Aug 2021 - Dec 2021",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "React Native Developer",
-    company_name: "Tesla",
-    icon: tesla,
-    iconBg: "#fbc3bc",
-    date: "Jan 2021 - Feb 2022",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Learned using and maintaining web applications using React.js.",
+      "Collaborating with teams and learned from senior developers about work environments and on creation high-quality products.",
+      "Participating in code reviews and gained constructive feedback to other developers.",
     ],
   },
   {
     title: "Web Developer",
-    company_name: "Shopify",
-    icon: shopify,
-    iconBg: "#b7e4c7",
-    date: "Jan 2022 - Jan 2023",
+    company_name: "Mavorion",
+    icon: mavorion,
+    iconBg: "#fbc3bc",
+    date: "Jan 2022 - Dec 2022",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+      "Developing and maintaining web applications using React.js, Antd Design and Redux-Saga.",
+      "Took lead for 3 months when there was a time to deploy an logistic app.",
+      "Gained intrest in server side development and started knowing about node js.",
+      "Learned AWS architecture and its services like S3, EC2, Cloudwatch and CI/CD",
       "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
     ],
   },
   {
-    title: "Full stack Developer",
-    company_name: "Meta",
-    icon: meta,
-    iconBg: "#a2d2ff",
+    title: "Full Stack developer",
+    company_name: "Upaya",
+    icon: upaya,
+    iconBg: "#b7e4c7",
     date: "Jan 2023 - Present",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
+      "Developing and maintaining web applications using React.js, Express.Js and Nest.Js .",
+      "Took a part in writing server side program for logistics Client App.",
+      "Collaborating with cross-functional teams including designers, product managers, operations and other developers to create high-quality products.",
+      "Re-Writing server side program for driver application and driver matching system.",
+      "Used cloud services like Textract, Logger, Buckets, Virtual Gateways and many new web technologies like docker, schedulling, Polling, Caching.",
+      "Gained intrest in kafka, kubernetes, writing yaml, deploying and scaling applications.",
       "Participating in code reviews and providing constructive feedback to other developers.",
     ],
   },
@@ -166,63 +194,13 @@ export const experiences = [
 
 export const socialLinks = [
   {
-    name: 'Contact',
-    iconUrl: contact,
-    link: '/contact',
-  },
-  {
     name: 'GitHub',
     iconUrl: github,
-    link: 'https://github.com/YourGitHubUsername',
+    link: 'https://github.com/1998Abishek1998',
   },
   {
     name: 'LinkedIn',
     iconUrl: linkedin,
-    link: 'https://www.linkedin.com/in/YourLinkedInUsername',
-  }
-];
-
-export const projects = [
-  {
-    iconUrl: pricewise,
-    theme: 'btn-back-red',
-    name: 'Amazon Price Tracker',
-    description: 'Developed a web application that tracks and notifies users of price changes for products on Amazon, helping users find the best deals.',
-    link: 'https://github.com/AbishekTimsina/pricewise',
-  },
-  {
-    iconUrl: threads,
-    theme: 'btn-back-green',
-    name: 'Full Stack Threads Clone',
-    description: 'Created a full-stack replica of the popular discussion platform "Threads," enabling users to post and engage in threaded conversations.',
-    link: 'https://github.com/AbishekTimsina/threads',
-  },
-  {
-    iconUrl: car,
-    theme: 'btn-back-blue',
-    name: 'Car Finding App',
-    description: 'Designed and built a mobile app for finding and comparing cars on the market, streamlining the car-buying process.',
-    link: 'https://github.com/AbishekTimsina/project_next13_car_showcase',
-  },
-  {
-    iconUrl: snapgram,
-    theme: 'btn-back-pink',
-    name: 'Full Stack Instagram Clone',
-    description: 'Built a complete clone of Instagram, allowing users to share photos and connect with friends in a familiar social media environment.',
-    link: 'https://github.com/AbishekTimsina/social_media_app',
-  },
-  {
-    iconUrl: estate,
-    theme: 'btn-back-black',
-    name: 'Real-Estate Application',
-    description: 'Developed a web application for real estate listings, facilitating property searches and connecting buyers with sellers.',
-    link: 'https://github.com/AbishekTimsina/projects_realestate',
-  },
-  {
-    iconUrl: summiz,
-    theme: 'btn-back-yellow',
-    name: 'AI Summarizer Application',
-    description: 'App that leverages AI to automatically generate concise & informative summaries from lengthy text content, or blogs.',
-    link: 'https://github.com/AbishekTimsina/project_ai_summarizer',
+    link: 'https://www.linkedin.com/in/abishek-timsina-795a89220/',
   }
 ];
