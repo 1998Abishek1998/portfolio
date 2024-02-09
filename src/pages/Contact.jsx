@@ -2,27 +2,25 @@ import emailjs from "@emailjs/browser";
 import { useRef, useState } from "react";
 
 import useAlert from "../hooks/useAlert";
-import { Alert } from "../components";
+import { Alert, Footer } from "../components";
 import EarthCanvas from '../components/canvas/EarthCanvas';
+import Recaptcha from '../components/Recaptcha';
 
 const Contact = () => {
   const formRef = useRef();
   const [form, setForm] = useState({ name: "", email: "", message: "" });
-  const { alert, showAlert, hideAlert } = useAlert();
   const [loading, setLoading] = useState(false);
-  const [currentAnimation, setCurrentAnimation] = useState("idle");
+  const [verified, setVerified] = useState(false);
+
+  const { alert, showAlert, hideAlert } = useAlert();
 
   const handleChange = ({ target: { name, value } }) => {
     setForm({ ...form, [name]: value });
   };
 
-  const handleFocus = () => setCurrentAnimation("walk");
-  const handleBlur = () => setCurrentAnimation("idle");
-
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
-    setCurrentAnimation("hit");
 
     emailjs
       .send(
@@ -30,9 +28,9 @@ const Contact = () => {
         import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
         {
           from_name: form.name,
-          to_name: "JavaScript Mastery",
+          to_name: "Abishek Timsina",
           from_email: form.email,
-          to_email: "sujata@jsmastery.pro",
+          to_email: "timabishek98@gmail.com",
           message: form.message,
         },
         import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
@@ -48,18 +46,18 @@ const Contact = () => {
 
           setTimeout(() => {
             hideAlert(false);
-            setCurrentAnimation("idle");
             setForm({
               name: "",
               email: "",
               message: "",
             });
+            setVerified(false)
           }, [3000]);
         },
         (error) => {
           setLoading(false);
           console.error(error);
-          setCurrentAnimation("idle");
+          setVerified(false)
 
           showAlert({
             show: true,
@@ -70,76 +68,82 @@ const Contact = () => {
       );
   };
 
+  const onRecapchaChange = () => {
+    setVerified(true)
+  }
+
   return (
-    <section className='relative flex lg:flex-row flex-col max-container bg-black-300 pt-20' id="contact">
-      {alert.show && <Alert {...alert} />}
+    <>
+      <div className=' max-container bg-black-300' id="contact">
+        <div className='flex lg:flex-row flex-col mt-20'>
 
-      <div className='flex-1 min-w-[50%] flex flex-col'>
-        <h1 className='head-text'>Get in Touch</h1>
+          {alert.show && <Alert {...alert} />}
 
-        <form
-          ref={formRef}
-          onSubmit={handleSubmit}
-          className='w-full flex flex-col gap-7 mt-14'
-        >
-          <label className='text-black-500 font-semibold'>
-            Name
-            <input
-              type='text'
-              name='name'
-              className='input'
-              placeholder='John'
-              required
-              value={form.name}
-              onChange={handleChange}
-              onFocus={handleFocus}
-              onBlur={handleBlur}
-            />
-          </label>
-          <label className='text-black-500 font-semibold'>
-            Email
-            <input
-              type='email'
-              name='email'
-              className='input'
-              placeholder='John@gmail.com'
-              required
-              value={form.email}
-              onChange={handleChange}
-              onFocus={handleFocus}
-              onBlur={handleBlur}
-            />
-          </label>
-          <label className='text-black-500 font-semibold'>
-            Your Message
-            <textarea
-              name='message'
-              rows='4'
-              className='textarea'
-              placeholder='Write your thoughts here...'
-              value={form.message}
-              onChange={handleChange}
-              onFocus={handleFocus}
-              onBlur={handleBlur}
-            />
-          </label>
+          <div className='flex-1 min-w-[50%] flex flex-col'>
+            <h1 className='head-text'>Get in Touch</h1>
 
-          <button
-            type='submit'
-            disabled={loading}
-            className='btn'
-            onFocus={handleFocus}
-            onBlur={handleBlur}
-          >
-            {loading ? "Sending..." : "Submit"}
-          </button>
-        </form>
+            <form
+              ref={formRef}
+              onSubmit={handleSubmit}
+              className='w-full flex flex-col gap-7 mt-14'
+            >
+              <label className='text-black-500 font-semibold'>
+                Name
+                <input
+                  type='text'
+                  name='name'
+                  className='input'
+                  placeholder='John'
+                  required
+                  value={form.name}
+                  onChange={handleChange}
+                />
+              </label>
+              <label className='text-black-500 font-semibold'>
+                Email
+                <input
+                  type='email'
+                  name='email'
+                  className='input'
+                  placeholder='John@gmail.com'
+                  required
+                  value={form.email}
+                  onChange={handleChange}
+                />
+              </label>
+              <label className='text-black-500 font-semibold'>
+                Your Message
+                <textarea
+                  name='message'
+                  rows='4'
+                  className='textarea'
+                  placeholder='Write your thoughts here...'
+                  value={form.message}
+                  onChange={handleChange}
+                />
+              </label>
+
+              {
+                form.name.length > 2 && form.email.length > 7 && form.message.length > 5 &&
+                < Recaptcha onChange={onRecapchaChange} />
+              }
+              <button
+                type='submit'
+                disabled={loading || !verified}
+                className='btn'
+              >
+                {loading ? "Sending..." : "Submit"}
+              </button>
+            </form>
+          </div>
+
+          <div className='w-full lg:h-auto md:h-[550px] h-[350px]'>
+            <EarthCanvas />
+          </div>
+        </div>
       </div>
-
-      <div className='lg:w-1/2 w-full lg:h-auto md:h-[550px] h-[350px]'>
-        <EarthCanvas />
-      </div>
-    </section>
+      <Footer />
+    </>
   );
 };
 
