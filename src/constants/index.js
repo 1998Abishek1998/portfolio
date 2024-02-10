@@ -1,6 +1,6 @@
 import { nuxt, vue, nest, aws, sql, mavorion, upaya } from "../assets/images";
+import { trelloclone, covid19, beachresort, winklemedia } from '../assets/images/projects';
 import {
-  contact,
   css,
   express,
   git,
@@ -121,11 +121,6 @@ export const skills = [
     type: "Version Control",
   },
   {
-    imageUrl: github,
-    name: "GitHub",
-    type: "Version Control",
-  },
-  {
     imageUrl: typescript,
     name: "TypeScript",
     type: "Frontend",
@@ -203,4 +198,48 @@ export const socialLinks = [
     iconUrl: linkedin,
     link: 'https://www.linkedin.com/in/abishek-timsina-795a89220/',
   }
+];
+
+
+export const projects = [
+  {
+    id: 1,
+    title: "React - Beach Resort",
+    img: beachresort,
+    desc: "This is the first app that I created using react. This was my early starting days with react and its environment. I used basics of react to create frontend only web app.",
+    gitUrl: "https://github.com/1998Abishek1998/react-beach-resort-room",
+    liveUrl: "https://react-beach-resort-room-3lni.vercel.app/",
+  },
+  {
+    id: 2,
+    title: "Nuxt - Trello Clone",
+    img: trelloclone,
+    desc: "This is the recent app that I created using Nuxt Js. I learned vue 3 back on 2021, but had not used it since. Hearing about Nuxt I wanted to give it a try.",
+    gitUrl: "https://github.com/1998Abishek1998/Trello-Clone",
+    liveUrl: "https://trello-clone-1.vercel.app/"
+  },
+  {
+    id: 3,
+    title: "MERN - WinkleMedia",
+    img: winklemedia,
+    desc: "This is a final year project I created on 2022. This application is like a low version discord. This project helped me to get credits without deploying it",
+    gitUrl: "https://github.com/1998Abishek1998/Final",
+    liveUrl: ""
+  },
+  {
+    id: 4,
+    title: "React - Covid 19 Info",
+    img: covid19,
+    desc: "I created this website when I had datas about the covid from an external app called dieases.sh. If there is you should see the payload but if not the designs are pretty much empty.",
+    gitUrl: "https://github.com/1998Abishek1998/covid-19-info",
+    liveUrl: ""
+  },
+  {
+    id: 5,
+    title: "MERN - Social App",
+    img: "https://images.pexels.com/photos/6894528/pexels-photo-6894528.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
+    desc: "This is a fullstack app created using MERN stack with graphQL. I was entruiged when I learned about graphQL so I tried to use it in this application.",
+    gitUrl: "https://github.com/1998Abishek1998/shoppingArea/tree/main",
+    liveUrl: ""
+  },
 ];
