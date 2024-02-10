@@ -43,16 +43,17 @@ const Single = ({ item, index }) => {
             <p>{item.desc}</p>
             <div className='flex justify-between items-center'>
               {
-                item.gitUrl.length &&
-                <Link to={item.gitUrl}>
-                  <button className='btn'>Source Code</button>
-                </Link>
+                item.gitUrl.length ?
+                  <Link to={item.gitUrl}>
+                    <button className='btn'>Code</button>
+                  </Link>
+                  : <></>
               }
               {
-                item.liveUrl.length &&
-                <Link to={item.liveUrl}>
-                  <button className='bg-blue-500'>Live Demo</button>
-                </Link>
+                item.liveUrl.length ?
+                  <Link to={item.liveUrl}>
+                    <button className='btn'> Demo</button>
+                  </Link> : <></>
               }
             </div>
           </motion.div>
