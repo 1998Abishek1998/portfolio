@@ -44,101 +44,121 @@ export const skills = [
     imageUrl: nodejs,
     name: "Node.Js",
     type: "Backend",
-  },
-  {
-    imageUrl: nest,
-    name: "Nest.Js",
-    type: "Backend",
+    myExperience: "I started my node js journey from 2020. This is when my coding journey began, from the period of lockdown. I was intrested in javasscript and wanted to build applications with it."
   },
   {
     imageUrl: express,
     name: "Express.Js",
-    type: "Backend",
+    type: "Backend (Node Framweork)",
+    myExperience: "I started my express js journey from 2020. This is when my coding journey began, from the period of lockdown. I made server with node and express combined."
   },
   {
     imageUrl: react,
     name: "React.Js",
-    type: "Frontend",
-  },
-  {
-    imageUrl: vue,
-    name: "Vue.Js",
-    type: "Frontend",
-  },
-  {
-    imageUrl: nextjs,
-    name: "Next.js",
-    type: "Frontend",
-  },
-  {
-    imageUrl: nuxt,
-    name: "Nuxt.Js",
-    type: "Frontend",
-  },
-  {
-    imageUrl: mongodb,
-    name: "MongoDB",
-    type: "Database",
-  },
-  {
-    imageUrl: sql,
-    name: "My SQL",
-    type: "Database",
-  },
-  {
-    imageUrl: aws,
-    name: "Amazon Web Services",
-    type: "Database",
+    type: "Frontend (Js Library)",
+    myExperience: "I started my react js journey from 2020. This is when my coding journey began, from the period of lockdown. I made SPA with react for companies I worked with and for some personal projects. I have created total 8-9 projects with React."
   },
   {
     imageUrl: redux,
     name: "Redux",
-    type: "State Management",
-  },
-  {
-    imageUrl: sass,
-    name: "Sass",
-    type: "Frontend",
-  },
-  {
-    imageUrl: tailwindcss,
-    name: "Tailwind CSS",
-    type: "Frontend",
-  },
-  {
-    imageUrl: motion,
-    name: "Motion",
-    type: "Animation",
-  },
-  {
-    imageUrl: mui,
-    name: "Material-UI",
-    type: "Frontend",
+    type: "Frontend (State Management)",
+    myExperience: "I started my redux journey from 2020. This is when my coding journey began, from the period of lockdown. I use redux for handling states of my all react applications."
   },
   {
     imageUrl: git,
     name: "Git",
     type: "Version Control",
+    myExperience: "I started my git journey from 2020. This is when my coding journey began, from the period of lockdown. I used it only for all of my projects."
   },
   {
     imageUrl: typescript,
     name: "TypeScript",
-    type: "Frontend",
+    type: "Programming Language",
+    myExperience: "I started my typescript journey from 2022. I statred using TS since I joined Upaya. I used it only for all of my projects since then, eliminating js completely."
   },
   {
     imageUrl: html,
     name: "HTML",
     type: "Frontend",
+    myExperience: "I started my HTML journey from 2020. This is when my coding journey began, from the period of lockdown. Without this none of my frontend framework knowledge and experience would be gained."
   },
   {
     imageUrl: css,
     name: "CSS",
-    type: "Frontend",
+    type: "Frontend (UI Kit)",
+    myExperience: "I started my CSS journey from 2020. This is when my coding journey began, from the period of lockdown. Without this none of my design and styling knowledge and experience would be gained."
   },
   {
     imageUrl: javascript,
     name: "JavaScript",
-    type: "Frontend",
+    type: "Programming Language",
+    myExperience: "I started my Javascript journey from 2020. This is when my coding journey began, from the period of lockdown. Without this none of my coding knowledge and experience would be gained."
+  },
+  {
+    imageUrl: nest,
+    name: "Nest.Js",
+    type: "Backend (Express Framework)",
+    myExperience: "I started my nest js journey from 2023. I sstarted learning this when I needed to make a service oriented application for my company. We have created 4 services with Nest Js."
+  },
+  {
+    imageUrl: vue,
+    name: "Vue.Js",
+    type: "Frontend (JS Framework)",
+    myExperience: "I started my Vue js journey from 2022. I learned and worked on vue when my team had no react projects ongoing. I used Vue 3 more but some of the project included Vue 2 as well."
+  },
+  {
+    imageUrl: mongodb,
+    name: "MongoDB",
+    type: "Database",
+    myExperience: "I started my MongoDb journey from 2021. This was my first experience with NO SQL or non relational databases. I created 7-8 applications with it."
+  },
+  {
+    imageUrl: sql,
+    name: "My SQL",
+    type: "Database",
+    myExperience: "I started my My SQL journey from 2023. I used it since joining Upaya and its so easy to work with SQL Databases. In upaya we mainly use SQL db as our main database."
+  },
+  {
+    imageUrl: aws,
+    name: "Amazon Web Services",
+    type: "Cloud Service",
+    myExperience: "I started my AWS journey from 2022. I have used many services like, EC2 S3, CloudWatch, APIGateway, Textract, VPCs, ECS ... and many more."
+  },
+  {
+    imageUrl: sass,
+    name: "Sass",
+    type: "Frontend (UI Kit)",
+    myExperience: "I started my Sass journey from 2020. This is when my coding journey began, from the period of lockdown. I used it only for 3 of my projects."
+  },
+  {
+    imageUrl: tailwindcss,
+    name: "Tailwind CSS",
+    type: "Frontend (UI Kit)",
+    myExperience: "I started my tailwind journey from 2023. I started using it after joining Upaya. I used it only for 3 of my projects."
+  },
+  {
+    imageUrl: mui,
+    name: "Material-UI",
+    type: "Frontend (UI Kit)",
+    myExperience: "I started my material UI journey from 2021. I used it only for 2 of my projects. I use this frequently with And Design. But after learning Tailwind my use of material UI has been comparatively low."
+  },
+  {
+    imageUrl: motion,
+    name: "Motion UI",
+    type: "Animation",
+    myExperience: "I started my motion UI journey from 2024. I used it only for one of my projects."
+  },
+  {
+    imageUrl: nextjs,
+    name: "Next.js",
+    type: "Frontend (React Framework)",
+    myExperience: "I started my Next js journey from 2023. I learned Next Js when I was free from any extra projects and wanted to explore frontend world."
+  },
+  {
+    imageUrl: nuxt,
+    name: "Nuxt.Js",
+    type: "Frontend (Vue Framework)",
+    myExperience: "I started my Nuxt js journey from 2024. I learned Nuxt Js when I was free from any extra projects and wanted to explore frontend world."
   },
 ];
 
