@@ -170,9 +170,8 @@ export const experiences = [
     iconBg: "#accbe1",
     date: "Aug 2021 - Dec 2021",
     points: [
-      "Learned using and maintaining web applications using React.js.",
-      "Collaborating with teams and learned from senior developers about work environments and on creation high-quality products.",
-      "Participating in code reviews and gained constructive feedback to other developers.",
+      "Internship and training of, MIS system and Logistic System.",
+      "I already had knowledge of the MERN stack application before joining. So I started to  implement my knowledge of React.",
     ],
   },
   {
@@ -183,7 +182,7 @@ export const experiences = [
     date: "Jan 2022 - Dec 2022",
     points: [
       "Developing and maintaining web applications using React.js, Antd Design and Redux-Saga.",
-      "Took lead for 3 months when there was a time to deploy an logistic app.",
+      "Took the lead for a quarter of a year when there was a time to deploy a Logistic app.",
       "Gained intrest in server side development and started knowing about node js.",
       "Learned AWS architecture and its services like S3, EC2, Cloudwatch and CI/CD",
       "Implementing responsive design and ensuring cross-browser compatibility.",
@@ -196,13 +195,15 @@ export const experiences = [
     iconBg: "#b7e4c7",
     date: "Jan 2023 - Present",
     points: [
-      "Developing and maintaining web applications using React.js, Express.Js and Nest.Js .",
-      "Took a part in writing server side program for logistics Client App.",
-      "Collaborating with cross-functional teams including designers, product managers, operations and other developers to create high-quality products.",
-      "Re-Writing server side program for driver application and driver matching system.",
-      "Used cloud services like Textract, Logger, Buckets, Virtual Gateways and many new web technologies like docker, schedulling, Polling, Caching.",
+      "Developing and maintaining web applications using React.js, Express.Js, Nest.Js and Hono.Js .",
+      "Wrote a server side program for logistics Client App, Driver App, Billing system, Report Generation, Driver matching Engine and Sales Analysis.",
+      "Implemented Cron jobs for billing system, and data migrations.",
+      "Implemented wallet payment methods in the system with Esewa and Khalti.",
+      "Re-writing the Database schemas and changing data structure for fast and smooth client side experience.",
+      "Used cloud services like Textract, Logger, Buckets, Virtual Gateways and many new web technologies like docker, scheduling, Polling, Caching.",
       "Gained intrest in kafka, kubernetes, writing yaml, deploying and scaling applications.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Collaborating with cross-functional teams including designers, product managers, operations and other developers to create high-quality products.",
+      "Participating in code reviews , providing constructive feedback and helping other developers.",
     ],
   },
 ];
