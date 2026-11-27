@@ -1,4 +1,3 @@
-import logo from './logo.svg'
 import vue from './vue.png'
 import nuxt from './nuxt.png'
 import nest from './nest.png'
@@ -8,7 +7,6 @@ import upaya from './upaya.png'
 import mavorion from './mavorion.png'
 
 export {
-  logo,
   vue,
   nuxt,
   nest,
