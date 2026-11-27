@@ -2,7 +2,8 @@ import { useEffect, useRef, useState } from "react";
 import "./project.scss";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { projects } from '../../constants';
-import { Link } from 'react-router-dom';
+
+const desktopQuery = window.matchMedia('(min-width: 1024px)');
 
 const Single = ({ item, index }) => {
   const ref = useRef();
@@ -11,17 +12,12 @@ const Single = ({ item, index }) => {
     target: ref,
   });
 
-  const [transform, setTransform] = useState(false)
+  const [transform, setTransform] = useState(() => desktopQuery.matches)
 
   useEffect(() => {
-    const handleScroll = () => {
-      if (window.innerWidth < 1024) setTransform(false)
-      else setTransform(true)
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => window.removeEventListener("scroll", handleScroll);
+    const onChange = (e) => setTransform(e.matches)
+    desktopQuery.addEventListener("change", onChange)
+    return () => desktopQuery.removeEventListener("change", onChange)
   }, [])
 
   const y = useTransform(scrollYProgress, [0, 1], [-200, 200]);
@@ -36,7 +32,7 @@ const Single = ({ item, index }) => {
       <div className="container">
         <div className="wrapper">
           <div className="imageContainer" ref={ref}>
-            <img src={item.img} alt="" />
+            <img src={item.img} alt={`${item.title} screenshot`} loading="lazy" />
           </div>
           <motion.div className={transform ? 'textContainer' : 'noTransFormText'} style={transform ? { y } : {}}>
             <h2>{item.title}</h2>
@@ -44,16 +40,16 @@ const Single = ({ item, index }) => {
             <div className='flex justify-between items-center'>
               {
                 item.gitUrl.length ?
-                  <Link to={item.gitUrl}>
-                    <button className='btn'>Code</button>
-                  </Link>
+                  <a href={item.gitUrl} target='_blank' rel='noopener noreferrer' className='btn inline-block'>
+                    Code
+                  </a>
                   : <></>
               }
               {
                 item.liveUrl.length ?
-                  <Link to={item.liveUrl}>
-                    <button className='btn'> Demo</button>
-                  </Link> : <></>
+                  <a href={item.liveUrl} target='_blank' rel='noopener noreferrer' className='btn inline-block'>
+                    Demo
+                  </a> : <></>
               }
             </div>
           </motion.div>

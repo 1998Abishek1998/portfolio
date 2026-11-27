@@ -68,7 +68,7 @@ const Hero = () => {
         Just JS
       </motion.div>
       <div className="imageContainer">
-        <img src="/abishek_profile.png" alt="" />
+        <img src="/abishek_profile.png" alt="Abishek Timsina" />
       </div>
     </div>
   );
