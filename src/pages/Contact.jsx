@@ -52,7 +52,7 @@ const Contact = () => {
               message: "",
             });
             setVerified(false)
-          }, [3000]);
+          }, 3000);
         },
         (error) => {
           setLoading(false);
@@ -74,7 +74,7 @@ const Contact = () => {
 
   return (
     <>
-      <div className=' max-container bg-black-300' id="contact">
+      <div className='max-container' id="contact">
         <div className='flex lg:flex-row flex-col mt-20'>
 
           {alert.show && <Alert {...alert} />}
@@ -87,7 +87,7 @@ const Contact = () => {
               onSubmit={handleSubmit}
               className='w-full flex flex-col gap-7 mt-14'
             >
-              <label className='text-black-500 font-semibold'>
+              <label className='text-white font-semibold'>
                 Name
                 <input
                   type='text'
@@ -99,7 +99,7 @@ const Contact = () => {
                   onChange={handleChange}
                 />
               </label>
-              <label className='text-black-500 font-semibold'>
+              <label className='text-white font-semibold'>
                 Email
                 <input
                   type='email'
@@ -111,11 +111,13 @@ const Contact = () => {
                   onChange={handleChange}
                 />
               </label>
-              <label className='text-black-500 font-semibold'>
+              <label className='text-white font-semibold'>
                 Your Message
                 <textarea
                   name='message'
                   rows='4'
+                  required
+                  minLength={6}
                   className='textarea'
                   placeholder='Write your thoughts here...'
                   value={form.message}
